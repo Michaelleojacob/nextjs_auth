@@ -1,24 +1,11 @@
-"use client";
+import Link from "next/link";
 
 export default function Home() {
-  const handleClick = async () => {
-    console.log("hi");
-    // const raw = await fetch("http://localhost:3000/api/users/addAlice", {
-    const raw = await fetch("http://localhost:3000/api/users/getUsers", {
-      method: "GET",
-      mode: "cors",
-      cache: "no-cache",
-      credentials: "same-origin",
-      headers: { "Content-Type": "application/json" },
-    });
-    console.log(raw);
-    const data = await raw.json();
-    console.log(data);
-  };
   return (
     <div>
-      <div>testing api routes</div>
-      <button onClick={handleClick}>fetch</button>
+      <div>
+        <Link href={"/testApiRoutes"}>test apis</Link>
+      </div>
     </div>
   );
 }

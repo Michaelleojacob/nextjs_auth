@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "start:dev": "NODE_ENV=development next start",
+    "start:prod": "NODE_ENV=production next start"
   },
   "dependencies": {
     "@prisma/client": "^5.3.0",
