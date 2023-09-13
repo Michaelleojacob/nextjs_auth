@@ -8,11 +8,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (req.method === "GET") {
-    console.log("hi");
     const users = await prisma.user.findMany();
-    console.log(users);
     return res.send(users);
   }
-  console.log("idk");
-  res.send("failed");
 }

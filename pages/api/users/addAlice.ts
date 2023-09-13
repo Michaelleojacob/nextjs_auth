@@ -13,5 +13,4 @@ export default async function handler(
       email: "alice@prisma.io",
     },
   });
-  // console.log(user);
 }
