@@ -2,7 +2,9 @@
 
 export default function Home() {
   const handleClick = async () => {
-    const raw = await fetch("http://localhost:3000/api/test", {
+    console.log("hi");
+    // const raw = await fetch("http://localhost:3000/api/addAlice", {
+    const raw = await fetch("http://localhost:3000/api/getUsers", {
       method: "GET",
       mode: "cors",
       cache: "no-cache",
