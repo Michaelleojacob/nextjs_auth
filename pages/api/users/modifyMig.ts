@@ -8,10 +8,9 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  console.log("hi");
   const updateUser = await prisma.user.update({
     where: {
-      email: "mig@gmail.com",
+      id: 1,
     },
     data: {
       superUser: true,

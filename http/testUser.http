@@ -4,7 +4,7 @@ content-type: application/json
 
 {
   "name": "Alice",
-  "email": "alice@prisma.io"
+  "password": "Alice"
 }
 ###
 POST http://localhost:3000/api/users/createUser
@@ -13,7 +13,7 @@ content-type: application/json
 
 {
   "name": "Mig",
-  "email": "mig@gmail.com",
+  "password": "Mig",
   "superUser": true
 }
 ###
@@ -23,7 +23,7 @@ content-type: application/json
 
 {
   "name": "a",
-  "email": "a@gmail.com",
+  "password": "a",
   "superUser": true
 }
 ###
@@ -33,7 +33,7 @@ content-type: application/json
 
 {
   "name": "b",
-  "email": "b@gmail.com",
+  "password": "b",
   "superUser": true
 }
 ###
