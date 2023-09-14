@@ -1,4 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
+
 import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
@@ -7,10 +8,14 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const user = await prisma.user.create({
+  console.log("hi");
+  const updateUser = await prisma.user.update({
+    where: {
+      email: "mig@gmail.com",
+    },
     data: {
-      name: "Alice",
-      email: "alice@prisma.io",
+      superUser: true,
     },
   });
+  return res.send(updateUser);
 }
