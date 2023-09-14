@@ -1,0 +1,2 @@
+GET http://localhost:3000/api/users/getUsers
+Content-Type: application/json
