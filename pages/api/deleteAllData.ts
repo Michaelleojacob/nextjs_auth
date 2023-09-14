@@ -1,7 +1,4 @@
-import { NextApiRequest, NextApiResponse } from "next";
-import { PrismaClient } from "@prisma/client";
-
-const prisma = new PrismaClient();
+import prisma from "../../prisma/prisma";
 
 export default async function deleteUsers() {
   await prisma.user.deleteMany({});
