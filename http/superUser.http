@@ -1,0 +1,18 @@
+POST http://localhost:3000/api/users/createUser
+Accept: application/json
+content-type: application/json
+
+{
+  "name": "Mig",
+  "password": "Mig",
+  "superUser": true
+}
+###
+PUT http://localhost:3000/api/users/superUser/modifyMig
+Accept: application/json
+content-type: application/json
+
+{
+  "superUser": true
+}
+###
