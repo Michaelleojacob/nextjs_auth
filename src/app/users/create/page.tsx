@@ -2,7 +2,7 @@
 import { SyntheticEvent, useState } from "react";
 
 export default function CreateUser() {
-  const [user, setUser] = useState({ name: "", email: "" });
+  const [user, setUser] = useState({ name: "", password: "" });
 
   const handleSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
@@ -14,7 +14,7 @@ export default function CreateUser() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         user: user.name.trim(),
-        email: user.email.trim(),
+        password: user.password.trim(),
       }),
     });
     const data = await raw.json();
@@ -37,16 +37,18 @@ export default function CreateUser() {
             name="name"
             value={user.name}
             onChange={handleChange}
+            required
           ></input>
         </label>
         <label>
-          email
+          password
           <input
             className="text-black"
             type="text"
-            name="email"
-            value={user.email}
+            name="password"
+            value={user.password}
             onChange={handleChange}
+            required
           ></input>
         </label>
         <button type="submit">submit</button>
