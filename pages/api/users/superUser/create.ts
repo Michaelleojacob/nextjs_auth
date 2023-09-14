@@ -1,5 +1,5 @@
-import prisma from "../../../../prisma/prisma";
 import { NextApiRequest, NextApiResponse } from "next";
+import prisma from "../../../../prisma/prisma";
 import bcrypt from "../../../bycrypt";
 import "dotenv/config";
 

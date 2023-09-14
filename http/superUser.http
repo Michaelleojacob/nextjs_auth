@@ -1,18 +1,8 @@
-POST http://localhost:3000/api/users/createUser
+GET http://localhost:3000/api/users/superUser/create
 Accept: application/json
 content-type: application/json
-
-{
-  "name": "Mig",
-  "password": "Mig",
-  "superUser": true
-}
 ###
-PUT http://localhost:3000/api/users/superUser/modifyMig
+GET http://localhost:3000/api/users/superUser/turnSuperUser
 Accept: application/json
 content-type: application/json
-
-{
-  "superUser": true
-}
 ###
